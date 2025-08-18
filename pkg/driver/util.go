@@ -38,5 +38,6 @@ func isCalledByAlistV3() bool {
 	}
 
 	funcName := runtime.FuncForPC(pc).Name()
-	return strings.Contains(funcName, "alist")
+	//return strings.Contains(funcName, "alist")
+	return false
 }
