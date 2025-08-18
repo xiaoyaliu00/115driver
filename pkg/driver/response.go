@@ -352,7 +352,7 @@ type ShareSnapResp struct {
             SnapID           string      `json:"snap_id"`
             FileSize         StringInt64 `json:"file_size"`
             ShareTitle       string      `json:"share_title"`
-            ShareState       StringInt      `json:"share_state"`
+            ShareState       int      `json:"share_state"`
             ShareDuration    int64      `json:"share_duration"`
             Skiploginstate   string     `json:"skip_login_state"`
             ForbidReason     string      `json:"forbid_reason"`
@@ -369,7 +369,7 @@ type ShareSnapResp struct {
 		} `json:"shareinfo"`
 		Count      int         `json:"count"`
 		List       []ShareFile `json:"list"`
-		ShareState string      `json:"share_state"`
+		ShareState int      `json:"share_state"`
         Errno   int     `json:"errno"`
         Error   string  `json:"error"`
         State   bool    `json:"state"`		
