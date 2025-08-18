@@ -349,25 +349,30 @@ type ShareSnapResp struct {
 			Face     string `json:"face"`
 		} `json:"userinfo"`
 		Shareinfo struct {
-			SnapID           string      `json:"snap_id"`
-			FileSize         StringInt64 `json:"file_size"`
-			ShareTitle       string      `json:"share_title"`
-			ShareState       string      `json:"share_state"`
-			ForbidReason     string      `json:"forbid_reason"`
-			CreateTime       StringInt64 `json:"create_time"`
-			ReceiveCode      string      `json:"receive_code"`
-			ReceiveCount     string      `json:"receive_count"`
-			ExpireTime       int64       `json:"expire_time"`
-			FileCategory     int64       `json:"file_category"`
-			AutoRenewal      string      `json:"auto_renewal"`
-			AutoFillRecvcode string      `json:"auto_fill_recvcode"`
-			CanReport        int         `json:"can_report"`
-			CanNotice        int         `json:"can_notice"`
-			HaveVioFile      int         `json:"have_vio_file"`
+            SnapID           string      `json:"snap_id"`
+            FileSize         StringInt64 `json:"file_size"`
+            ShareTitle       string      `json:"share_title"`
+            ShareState       StringInt      `json:"share_state"`
+            ShareDuration    int64      `json:"share_duration"`
+            Skiploginstate   string     `json:"skip_login_state"`
+            ForbidReason     string      `json:"forbid_reason"`
+            CreateTime       StringInt64 `json:"create_time"`
+            ReceiveCode      string      `json:"receive_code"`
+            ReceiveCount     int      `json:"receive_count"`
+            ExpireTime       int64       `json:"expire_time"`
+            FileCategory     int64       `json:"file_category"`
+            AutoRenewal      int      `json:"auto_renewal"`
+            AutoFillRecvcode int      `json:"auto_fill_recvcode"`
+            CanReport        int         `json:"can_report"`
+            CanNotice        int         `json:"can_notice"`
+            HaveVioFile      int         `json:"have_vio_file"`
 		} `json:"shareinfo"`
 		Count      int         `json:"count"`
 		List       []ShareFile `json:"list"`
 		ShareState string      `json:"share_state"`
+        Errno   int     `json:"errno"`
+        Error   string  `json:"error"`
+        State   bool    `json:"state"`		
 		UserAppeal struct {
 			CanAppeal       int `json:"can_appeal"`
 			CanShareAppeal  int `json:"can_share_appeal"`
