@@ -3,7 +3,7 @@ package driver
 import (
 	"runtime"
 	"strconv"
-	"strings"
+//	"strings"
 	"time"
 )
 
@@ -37,7 +37,7 @@ func isCalledByAlistV3() bool {
 		return false
 	}
 
-	funcName := runtime.FuncForPC(pc).Name()
+	//funcName := runtime.FuncForPC(pc).Name()
 	//return strings.Contains(funcName, "alist")
 	return false
 }
