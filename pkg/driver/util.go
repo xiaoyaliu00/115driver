@@ -32,12 +32,5 @@ func Date() string {
 }
 
 func isCalledByAlistV3() bool {
-	pc, _, _, ok := runtime.Caller(3)
-	if !ok {
-		return false
-	}
-
-	funcName := runtime.FuncForPC(pc).Name()
-	//return strings.Contains(funcName, "alist")
 	return false
 }
